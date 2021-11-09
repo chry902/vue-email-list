@@ -9,8 +9,21 @@ Confermate lettura e buon divertimento */
 const app = new Vue({
     el: `#app`,
     data: {
-        emailRandom: ``,
-        emailRandom1: ``,
+        emailRandom =[
+            `email1`,
+            `email2`,
+            `email3`,
+            `email4`,
+            `email5`,
+            `email6`,
+            `email7`,
+            `email8`,
+            `email9`,
+            `email10`
+
+
+        ],
+
     },
 
     mounted() {
@@ -18,12 +31,12 @@ const app = new Vue({
             .get(`https://flynn.boolean.careers/exercises/api/random/mail`)
             .then(response => {
                 console.log(response.data.response);
-                this.emailRandom = response.data.response
-                this.emailRandom1 = response.data.response
+                response.data.response.
+
 
             }).catch(error => {
-                console.log(error);
-            })
+                    console.log(error);
+                })
     }
 
 
